@@ -1,0 +1,37 @@
+
+.footer-text{
+  text-align: left;
+  font-size: 70px;
+}
+
+
+.socialIcons{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 15px;
+
+}
+
+.socialIcons a{
+  color: var(--color-text);
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 15px;
+
+  background: transparent;
+  border-top: 2px solid var(--color-border);
+  border-left: 3px solid var(--color-border);
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.socialIcons a:hover{
+  color:var(--color-muted);
+  text-shadow: 0 0 10px var(--color-muted);
+}
