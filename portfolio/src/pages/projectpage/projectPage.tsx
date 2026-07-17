@@ -1,33 +1,15 @@
 import ProjectCard from "../../components/project/ProjectCard";
-import type { Project } from "../../components/project/project";
 import "./projectPage.css"
 import useLocalStorage from "../../hooks/useLocalStorage";
-
-const projects : Project[] = [
-    {
-        title: "Personal Portofolio",
-        description: "A responsive personal portfolio website built to showcase my profile, skills, and projects.",
-        techStack: ["React", "TypeScript", "CSS"],
-    },
-    {
-        title: "Project 2",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        techStack: ["Python", "C++"],
-        liveUrl: "https://example.com"
-    },
-    {
-        title: "Project 3",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        techStack: ["Prolog", "C"],
-        liveUrl: "https://example.com"
-    },
-];
+import { useProjectStore } from "../../store/store";
 
 function ProjectsPage(){
+    const projects = useProjectStore((state) => state.projects);
+
     const [showLiveOnly, setShowLiveOnly] =
     useLocalStorage<boolean>("show-live-only", false);
 
-  const visibleProjects = showLiveOnly
+    const visibleProjects = showLiveOnly
     ? projects.filter((project) => Boolean(project.liveUrl))
     : projects;
     return(
