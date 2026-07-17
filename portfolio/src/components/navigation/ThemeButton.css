@@ -1,0 +1,17 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+
+  background-color: var(--color-surface);
+  color: var(--color-text);
+
+  font-size: 20px;
+  cursor: pointer;
+}
