@@ -63,7 +63,7 @@ h2{
 
 p{
   margin-top: 10px;
-  color:var(--color-muted);
+  color: var(--color-text);
   font-size: 18px;
   text-align:center;
   margin-bottom: 16px;
@@ -71,5 +71,5 @@ p{
 
 .highlight-text {
   color: var(--color-accent);
-  font-weight: 800px;
+  font-weight: 800;
 }

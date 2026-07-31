@@ -51,7 +51,7 @@
 
 .nav-link.active {
   background-color: var(--color-secondary);
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .navbar a:hover{

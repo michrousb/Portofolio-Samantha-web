@@ -4,7 +4,7 @@ function HomePage() {
     return (
         <section className="hero-section page-container">
             <div className="hero-image">
-                <img src="/images/photo1.jpg" alt="" />
+                <img src="/images/photo1.jpg" alt="Portrait of Samantha Michelle" />
             </div>
             <div className="hero-text">
                 <p>Hi, I'm</p>

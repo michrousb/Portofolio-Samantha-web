@@ -2,8 +2,12 @@
 .footer-text{
   text-align: left;
   font-size: 70px;
+  color: var(--color-text);
 }
 
+.footer-text p {
+  color: inherit;
+}
 
 .socialIcons{
   margin-top: 20px;
