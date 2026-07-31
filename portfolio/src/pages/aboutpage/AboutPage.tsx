@@ -6,7 +6,7 @@ function AboutPage() {
         <section className="about-section page-container">
             <div className="about-content">
                 <div className="about-image">
-                    <img src="/images/aboutphoto.jpg"/>
+                    <img src="/images/aboutphoto.jpg" alt="Samantha Michelle smiling" />
                 </div>
                 <div className="about-text">
                     <h1>Get to Know <span className="highlight-text">Me.</span></h1>
@@ -16,7 +16,7 @@ function AboutPage() {
                 </div>    
             </div>
             <div className = "skills-content">
-                    <h1><span className="highlight-text">Tech</span>Skills.</h1>
+                    <h2><span className="highlight-text">Tech</span>Skills.</h2>
                     <div className="tools-container">
                         {tools.map((tool)=>(
                             <span className="tool-item" key={tool}>
