@@ -31,11 +31,28 @@ function isSortOrder(value: string): value is SortOrder {
 
 function ProjectsPage() {
   const projects = useProjectStore((state) => state.projects);
+  const setProjects = useProjectStore((state) => state.setProjects);
+  useEffect(() => {
+  fetch("http://localhost:3001/api/projects")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch projects");
+      }
 
+      return response.json();
+    })
+    .then((data) => {
+      setProjects(data);
+    })
+    .catch((error) => {
+      console.error("Error fetching projects:", error);
+    });
+}, [setProjects]);
   const [demoFilter, setDemoFilter] = useLocalStorage<DemoFilter>(
     "projects-demo-filter",
     "all"
   );
+  
   const [sortOrder, setSortOrder] = useLocalStorage<SortOrder>(
     "projects-sort-order",
     "default"
